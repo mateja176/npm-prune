@@ -1,0 +1,26 @@
+{
+  "name": "npm-prune",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=14 <15"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node build/index.js",
+    "prune:prod": "export NODE_ENV=production; npm prune",
+    "ci:prod": "export NODE_ENV=production; npm ci"
+  },
+  "keywords": [],
+  "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}
